@@ -1,4 +1,4 @@
-# realredis
+# RealRedis
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![PHP Version][ico-php-version]][link-packagist]
