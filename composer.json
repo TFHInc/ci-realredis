@@ -1,0 +1,26 @@
+{
+    "name": "tfhinc/ci-realredis",
+    "description": "Really Redis! - RealRedis is a wrapper library for phpredis in the Codeigniter framework.",
+    "keywords": ["codeigniter", "ci-realredis", "redis", "phpredis", "cache"],
+    "homepage": "https://github.com/TFHInc/ci-realredis",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin Rafuse",
+            "email": "colin.rafuse@gmail.com",
+            "homepage": "http://colinrafuse.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TFHInc\\RealRedis\\": "src"
+        }
+    }
+}
