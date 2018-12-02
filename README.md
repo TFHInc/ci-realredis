@@ -15,12 +15,12 @@ Really Redis! - RealRedis is a wrapper library for phpredis in the [Codeigniter]
 
 ## Installation
 
+Install the library via composer:
 ```bash
 composer require tfhinc/ci-realredis
 ```
 
 Run the post install command to publish the helper and class files to the appropriate CI directories:
-
 ```bash
 composer --working-dir=vendor/tfhinc/ci-realredis/ run-script publish-scripts
 ```
