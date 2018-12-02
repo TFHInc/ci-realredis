@@ -24,8 +24,9 @@
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "@php -r \"copy('src/Libraries/RealRedis.php', '../../../application/libraries/RealRedis.php');\""
+        "publish-scripts": [
+            "@php -r \"copy('src/Libraries/RealRedis.php', '../../../application/libraries/RealRedis.php');\"",
+            "@php -r \"copy('src/Helpers/RealRedis.php', '../../../application/helpers/realredis_helper.php');\""
         ]
     }
 }

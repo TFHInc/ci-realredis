@@ -21,6 +21,12 @@ composer require tfhinc/ci-realredis
 
 - Copy the `tfhinc/ci-realredis/src/Helpers/realredis_helper.php` file to `application/helpers/realredis_helper.php`
 
+Run the post install command to publish the helper and class files to the appropriate CI directories:
+
+```bash
+composer --working-dir=vendor/tfhinc/ci-realredis/ run-script publish-scripts
+```
+
 ## Loading the Library
 
 There are a few available options for loading the RealRedis library:
