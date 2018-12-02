@@ -24,7 +24,7 @@
         }
     },
     "scripts": {
-        "post-package-install": [
+        "post-install-cmd": [
             "php -r \"copy('vendor/tfhinc/ci-realredis/src/Libraries/RealRedis.php', 'application/libraries/RealRedis.php');\""
         ]
     }
