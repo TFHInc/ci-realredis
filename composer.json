@@ -29,7 +29,7 @@
     },
     "extra": {
         "dropin-paths": {
-            "application/library/": ["package:tfhinc/ci-realredis:src/Libraries/RealRedis.php"]
+            "application/libraries/": ["package:tfhinc/ci-realredis:src/Libraries/RealRedis.php"]
         }
     }
 }
