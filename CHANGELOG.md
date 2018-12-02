@@ -2,6 +2,15 @@
 
 All notable changes to the `ci-realredis` library will be documented in this change log file.
 
+## v1.1.7 - 2018-12-01
+
+### Added
+- Post install composer script
+- CI Library class
+
+### Modified
+- Readme install instructions
+
 ## v1.0.0 - 2018-12-01
 
 ### Added
