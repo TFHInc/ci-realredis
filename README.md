@@ -22,7 +22,7 @@ composer require tfhinc/ci-realredis
 
 Run the post install command to publish the helper and class files to the appropriate CI directories:
 ```bash
-composer --working-dir=vendor/tfhinc/ci-realredis/ run-script publish-scripts
+composer --working-dir=vendor/tfhinc/ci-realredis/ run-script publish-files
 ```
 
 ## Loading the Library
@@ -45,6 +45,14 @@ The RealRedis class can be instantiated when you require it:
 $redis = new TFHInc/RealRedis/RealRedis();
 ```
 
+### Using the RealRedis CI Library
+
+The RealRedis class can be instantiated when you require it:
+
+``` php
+$this->load->library('RealRedis');
+```
+
 ## Usage
 
 ```php
@@ -58,6 +66,12 @@ realredis()->get('sample.key');
 // Use the RealRedis class
 
 $realredis = new TFHInc\RealRedis\RealRedis();
+
+$realredis->get('sample.key');
+
+// Use the RealRedis CI Library
+
+$this->load->library('RealRedis');
 
 $realredis->get('sample.key');
 ```

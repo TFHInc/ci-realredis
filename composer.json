@@ -24,9 +24,9 @@
         }
     },
     "scripts": {
-        "publish-scripts": [
+        "publish-files": [
             "@php -r \"copy('src/Libraries/RealRedis.php', '../../../application/libraries/RealRedis.php');\"",
-            "@php -r \"copy('src/Helpers/RealRedis.php', '../../../application/helpers/realredis_helper.php');\""
+            "@php -r \"copy('src/Helpers/realredis_helper.php', '../../../application/helpers/realredis_helper.php');\""
         ]
     }
 }
