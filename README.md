@@ -19,8 +19,6 @@ Really Redis! - RealRedis is a wrapper library for phpredis in the [Codeigniter]
 composer require tfhinc/ci-realredis
 ```
 
-- Copy the `tfhinc/ci-realredis/src/Helpers/realredis_helper.php` file to `application/helpers/realredis_helper.php`
-
 Run the post install command to publish the helper and class files to the appropriate CI directories:
 
 ```bash
