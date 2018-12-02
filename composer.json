@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "php" : ">=7.1.0"
+        "php" : ">=7.1.0",
+        "koodimonni/composer-dropin-installer": "*"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*"
@@ -21,6 +22,14 @@
     "autoload": {
         "psr-4": {
             "TFHInc\\RealRedis\\": "src"
+        }
+    },
+    "config": {
+        "dropin-installer": "copy"
+    },
+    "extra": {
+        "dropin-paths": {
+            "application/library/": ["package:tfhinc/ci-realredis:src/Libraries/RealRedis.php"]
         }
     }
 }
