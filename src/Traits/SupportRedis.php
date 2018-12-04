@@ -12,30 +12,50 @@ namespace TFHInc\RealRedis\Traits;
  */
 trait SupportRedis {
     /**
-     * Get cache key else execute the callable and set it
+     * Get the cache key. If it does not exist, execute the callable and set the cache key.
      *
-     * @param   string    $key    Cache ID
+     * @param   string      $key
+     * @param   int         $ttl
+     * @param   callable    $callable
      * @return  mixed
      */
-    public function getElseSet(string $key, int $ttl, callable $else_callable)
+    public function getElseSet(string $key, int $ttl, callable $callable)
     {
         if ($this->exists($key)) {
-            error_log('return from cache');
             return $this->get($key);
         }
 
-        error_log('run callable');
         try {
-            $else_data = call_user_func($else_callable);
+            $callable_data = call_user_func($callable);
         } catch( Exception $e ) {
             // throw exception
         }
 
-        error_log('set from callable');
-        $this->set($key, $else_data);
+        $this->set($key, $callable_data);
         $this->expireAt($key, time() + $ttl);
 
-        error_log('return from cache');
+        return $this->get($key);
+    }
+
+    /**
+     * Execute the callable and set the cache key.
+     *
+     * @param   string      $key
+     * @param   int         $ttl
+     * @param   callable    $callable
+     * @return  mixed
+     */
+    public function getAndSet(string $key, int $ttl, callable $callable)
+    {
+        try {
+            $callable_data = call_user_func($callable);
+        } catch( Exception $e ) {
+            // throw exception
+        }
+
+        $this->set($key, $callable_data);
+        $this->expireAt($key, time() + $ttl);
+
         return $this->get($key);
     }
 }
